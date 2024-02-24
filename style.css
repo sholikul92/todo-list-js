@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+	border: none;
+	list-style: none;
+}
+
+body {
+	background-color: rgba(128, 128, 128, 0.13);
+}
+
+main {
+	margin: 2em auto;
+	max-width: 600px;
+	min-height: 90vh;
+	padding: 1em;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+
+form input {
+	width: 100%;
+	padding: 14px;
+	padding-right: 6em;
+	background-color: #d8d8d875;
+	border-radius: 20px;
+	font-size: 1em;
+}
+
+form input[type="text"]:focus {
+	outline: none;
+	border: 1px solid blue;
+}
+
+form button {
+	padding: 16px 20px;
+	background-color: blue;
+	color: white;
+	border-radius: 20px;
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
+
+form button:hover {
+	background-color: darkblue;
+}
+
+#list-todo {
+	margin-top: 2em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+#list-todo .list {
+	display: flex;
+	align-items: center;
+	padding-bottom: 1em;
+	border-bottom: 1px solid gray;
+}
+
+.list span {
+	flex: 1;
+}
+
+.list span.success {
+	text-decoration: line-through;
+}
+
+.list .btn {
+	padding: 10px 20px;
+	border-radius: 20px;
+	color: white;
+}
+
+#button {
+	display: flex;
+	gap: 5px;
+}
+
+.btn-success {
+	background-color: green;
+	cursor: pointer;
+}
+
+.btn-delete {
+	background-color: red;
+	cursor: pointer;
+}
+
+.btn-success:hover {
+	background-color: darkgreen;
+}
+
+.btn-delete:hover {
+	background-color: darkred;
+}
+
+/* mobile screen */
+@media (max-width: 768px) {
+	main {
+		margin: 1em;
+		max-width: 95vw;
+		min-height: 95vh;
+	}
+
+	.list .btn {
+		font-size: 12px;
+		padding: 4px 8px;
+	}
+}
